@@ -9,9 +9,9 @@ import UserTable from './UserTable'
 const App = () => {
 	// Data
 	const usersData = [
-		{ id: 1, name: 'Tania', username: 'floppydiskette' },
-		{ id: 2, name: 'Craig', username: 'siliconeidolon' },
-		{ id: 3, name: 'Ben', username: 'benisphere' },
+		{ id: 1, name: 'João', username: 'jpfurini' },
+		{ id: 2, name: 'Carlos', username: 'carlinhows' },
+		{ id: 3, name: 'Elaine', username: 'elaine_123' },
 	]
 
 	const initialFormState = { id: null, name: '', username: '' }
@@ -52,9 +52,9 @@ const App = () => {
           
         </div>
       <div class="my-3 p-3 bg-white rounded box-shadow">
-			<div className="row">
+			<div className="flex-row">
 			
-				<div className="col-md-6">
+				<div className="flex-large">
 					{editing ? (
 						<Fragment>
 							<h2>Edit user</h2>
@@ -72,7 +72,7 @@ const App = () => {
 						</Fragment>
 					)}
 				</div>
-				<div className="col-md-6">
+				<div className="flex-large">
 					<h2>View users</h2>
 					<UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
 				</div>
