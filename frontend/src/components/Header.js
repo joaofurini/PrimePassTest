@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-
-class Header extends Component {
-    render() {
+//Creating the Header component
+const Header = ()=> {
+    
         return (
          
           <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -24,7 +24,7 @@ class Header extends Component {
           </div>
         </nav>
         )
-    }
+    
 }
 
 

@@ -7,38 +7,39 @@ import UserTable from './UserTable'
 
 
 const App = () => {
-	// Data
+	// Creating local users
 	const usersData = [
 		{ id: 1, name: 'João', username: 'jpfurini' },
 		{ id: 2, name: 'Carlos', username: 'carlinhows' },
 		{ id: 3, name: 'Elaine', username: 'elaine_123' },
 	]
-
+	//Defining the initial form of the form
 	const initialFormState = { id: null, name: '', username: '' }
 
-	// Setting state
+	// Setting state 
 	const [ users, setUsers ] = useState(usersData)
 	const [ currentUser, setCurrentUser ] = useState(initialFormState)
 	const [ editing, setEditing ] = useState(false)
 
 	// CRUD operations
+	//ADD user
 	const addUser = user => {
 		user.id = users.length + 1
 		setUsers([ ...users, user ])
 	}
-
+	//DELETE user
 	const deleteUser = id => {
 		setEditing(false)
 
 		setUsers(users.filter(user => user.id !== id))
 	}
-
+	//UPDATE user
 	const updateUser = (id, updatedUser) => {
 		setEditing(false)
 
 		setUsers(users.map(user => (user.id === id ? updatedUser : user)))
 	}
-
+	//Defining the edit form 
 	const editRow = user => {
 		setEditing(true)
 
@@ -46,6 +47,7 @@ const App = () => {
 	}
 
 	return (
+		
 		<div className="container">
 		 <div class="text-center">
           <h1 >Users List</h1>

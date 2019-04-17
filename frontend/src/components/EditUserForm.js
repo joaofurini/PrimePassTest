@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
-
+//Creating EdiUserForm Component 
 const EditUserForm = props => {
+  //Declaring the state user and setUser
   const [ user, setUser ] = useState(props.currentUser)
 
+  //Using the effect to update the user.
   useEffect(
     () => {
       setUser(props.currentUser)
@@ -10,7 +12,7 @@ const EditUserForm = props => {
     [ props ]
   )
   
-
+  //Method to hande the change of the input
   const handleInputChange = event => {
     const { name, value } = event.target
 
@@ -21,7 +23,6 @@ const EditUserForm = props => {
     <form
       onSubmit={event => {
         event.preventDefault()
-
         props.updateUser(user.id, user)
       }}
     >

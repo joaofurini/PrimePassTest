@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
-
-class Footer extends Component {
-    render() {
+//Creating the footer component
+const Footer = () => {
+     
         return (
             <footer class="footer font-small bg-dark fixed-bottom">
                 <div class="footer-copyright text-center py-3 text-white">© Done with love by:
@@ -11,7 +11,7 @@ class Footer extends Component {
                 </div>
             </footer>
         )
-    }
+    
 }
 
 export default Footer;
