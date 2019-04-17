@@ -29,6 +29,10 @@ First of all clone this repository in a folder of your preference using the:
 ```
 git clone https://github.com/joaofurini/PrimePassTest.git
 ```
+Then go to the frontend directory typing:
+```
+cd frontend
+```
 To install the dependencies that were used in the project, open the project in your Terminal or Windows CMD and type:
 
 ```
