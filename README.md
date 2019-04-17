@@ -33,6 +33,7 @@ Then go to the frontend directory typing:
 ```
 cd frontend
 ```
+This is our REACT application.
 To install the dependencies that were used in the project, open the project in your Terminal or Windows CMD and type:
 
 ```
